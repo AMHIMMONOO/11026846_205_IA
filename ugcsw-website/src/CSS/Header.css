@@ -1,0 +1,218 @@
+/* CSS file for the Header component */
+
+/* Import the font-awesome icons */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/* Define some variables for colors and sizes */
+:root {
+  --primary-color: #006b3f;
+  --secondary-color: #f8f8f8;
+  --accent-color: #f9a825;
+  --dark-color: #333333;
+  --light-color: #ffffff;
+  --header-height: 80px;
+  --logo-width: 60px;
+}
+
+/* Style the header element */
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  height: var(--header-height);
+  background-color: white;
+  color: var(--light-color);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Style the header logo */
+.left-section {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 15px;
+  flex-shrink: 0;
+  align-items: center;
+
+}
+
+.left-section img {
+  width: var(--logo-width);
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.second-left-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.second-left-section h1 {
+  text-align: left;
+  font-size: 2.5rem;
+  color: rgb(0, 60, 120);
+  cursor: pointer;
+  margin-bottom: 25px 
+ 
+}
+
+.second-left-section ul {
+  display: flex;
+  margin-top: -23px;
+  padding: 0;
+  height: fit-content;
+  list-style: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+
+  
+}
+
+.second-left-section li {
+  border-right: 1px solid black;
+  height: 10px;
+  margin: 0px 2.5px
+}
+
+.noBorder {
+border: none;
+}
+
+.left-section span {
+  transition: all 0.3s ease-in-out;
+}
+
+.left-section h1 span:hover {
+  background: #00235A;
+  background: radial-gradient(circle farthest-corner at bottom right , #00235A 10%, #02146d 30%, #AB8437 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /*background: linear-gradient(90deg,#ac8337,#652d90 51%,#00335a);*/ 
+}
+
+.second-left-section a {
+  background: #00235A;
+  background: linear-gradient(90deg,#ac8337,#02146d 51%,#00335a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-right: 2.5px;
+  background-color: transparent;
+}
+
+/* Style the header search */
+.middle-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  margin-right: 15px;
+  max-width: 300px;
+  
+}
+
+.middle-section input {
+  flex: 1;
+  padding: 10px;
+  border-width: 2px;
+  border-style: solid;
+  outline: none;
+  border-color: var(--accent-color);
+  border-radius: 6px;
+  width: 77px;
+  box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.25);
+  
+}
+
+.middle-section button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  background-color: var(--accent-color);
+  color: var(--light-color);
+  cursor: pointer;
+  margin-left: -1px;
+  transition: all 0.3s ease-in-out; /* Add a transition effect */
+}
+
+.header-search button:hover {
+  transform: scale(1.1); /* Increase the size on hover */
+}
+
+/* Style the header navigation */
+.right-section {
+  display: flex;
+  margin-right: 15px;
+}
+
+.right-section ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.right-section li {
+  margin: 0 5px;
+}
+
+.right-section a {
+  display: block;
+  padding: 10px;
+  font-weight: bold;
+  position: relative;
+  color: rgb(171, 132, 55);
+  transition: all 0.3s ease-in-out; /* Add a transition effect */
+}
+
+.right-section a:hover {
+  background: #00235A;
+  background: linear-gradient(90deg,#ac8337,#02146d 80%,#00335a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;;  /*color: rgb(192, 160, 90);/* /* #00335a #00819a Change the background color on hover */
+}
+
+.right-section a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg,#ac8337,#652d90 51%,#00335a);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.right-section a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Add media queries for responsiveness */
+@media (max-width: 768px) {
+  /* Hide the header logo text and list on small screens */
+  .left-section h1, .left-section ul {
+    display: none;
+  }
+
+  /* Reduce the header search input width on small screens */
+  .middle-section input {
+    width: 100px;
+  }
+  
+  /* Reduce the header navigation margin on small screens */
+  .right-section li {
+    margin: 0 5px;
+  }
+}
+
+

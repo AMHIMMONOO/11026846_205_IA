@@ -1,0 +1,32 @@
+/* CoursesPage.css */
+
+.courses-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+h2 {
+  color: #006b3f; /* Use your preferred color */
+}
+
+ul, table {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+li, th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Add styling for filter options and semester filter as needed */

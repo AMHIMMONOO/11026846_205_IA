@@ -1,0 +1,30 @@
+/* ProgramsPage.css */
+
+.programs-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+h2 {
+  color: #006b3f; /* Use your preferred color */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 20px;
+}
+
+p {
+  margin-top: 10px;
+  color: #333; /* Use your preferred color */
+}
+
+body {
+  padding-top: 85px;
+}

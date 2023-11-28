@@ -1,0 +1,50 @@
+/* FacultyPages.css */
+
+.faculty-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+h2 {
+  color: #006b3f; /* Use your preferred color */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+img {
+  max-width: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+h3 {
+  color: #006b3f; /* Use your preferred color */
+}
+
+p {
+  margin-top: 10px;
+  color: #333; /* Use your preferred color */
+}
+
+a {
+  color: #006b3f; /* Use your preferred color */
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+a:hover {
+  text-decoration: underline;
+}

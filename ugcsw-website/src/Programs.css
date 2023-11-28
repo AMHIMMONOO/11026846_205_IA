@@ -1,0 +1,30 @@
+/* Programs.css */
+.programs-container {
+  font-family: 'Arial', sans-serif;
+  /* Add any global styles for the entire component */
+}
+
+.undergraduate-programs,
+.graduate-programs,
+.research-opportunities {
+  margin-bottom: 40px;
+}
+
+.programs-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.programs-list div {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.programs-list h3 {
+  color: #3498db;
+}
+
+/* Add more styles based on your design preferences */
+
